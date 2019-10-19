@@ -1,3 +1,6 @@
-plugged/
+
 autoload/
 colors/
+plugged/
+
+vim-lsp.log
