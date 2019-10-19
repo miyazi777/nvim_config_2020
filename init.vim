@@ -436,8 +436,8 @@ nmap <silent> ;r <Plug>(coc-references)
 " ---------------
 " ale setting
 " ---------------
-"let g:ale_fixers = {
-"      \ 'go': ['golint'],
-"      \ 'ruby': ['rubocop'],
-"      \ }
+let g:ale_fixers = {
+      \ 'go': ['golint'],
+      \ 'ruby': ['rubocop'],
+      \ }
 
