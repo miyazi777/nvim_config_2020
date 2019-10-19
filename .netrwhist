@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/takeshimiyajima'
+let g:netrw_dirhist_2='/Users/takeshimiyajima/kyu/neo_core/test'
+let g:netrw_dirhist_3='/Users/takeshimiyajima/new_study/react.js/book1/.git'
+let g:netrw_dirhist_4='/Users/takeshimiyajima/study/webpack4/test1'
+let g:netrw_dirhist_5='/Users/takeshimiyajima/.config/nvim'
+let g:netrw_dirhist_6='/Users/takeshimiyajima/.config'
+let g:netrw_dirhist_7='/Users/takeshimiyajima/study/gae_go/helloworld'
