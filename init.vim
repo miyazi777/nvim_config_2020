@@ -251,11 +251,6 @@ Plug 'mattn/emmet-vim', { 'for': ['html'] }
 " lsp & complete plugin
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'prabirshrestha/asyncomplete-file.vim'
-Plug 'prabirshrestha/asyncomplete-buffer.vim'
-Plug 'prabirshrestha/asyncomplete-tags.vim'
 
 " fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -459,7 +454,7 @@ let g:lsp_signs_error = {'text': '✖'}
 let g:lsp_signs_warning = {'text': '~'}
 let g:lsp_signs_hint = {'text': '?'}
 let g:lsp_signs_information = {'text': '!!'}
-let g:lsp_async_completion = 1
+"let g:lsp_async_completion = 1
 let g:lsp_signs_error = {'text': '✗'}
 " debug
 "let g:lsp_log_verbose = 1
@@ -489,51 +484,4 @@ autocmd FileType go nmap <silent> <M-b> :GoDebugBreakpoint<CR>
 autocmd FileType go nmap <silent> <M-n> :GoDebugNext<CR>
 autocmd FileType go nmap <silent> <M-s> :GoDebugStep<CR>
 autocmd FileType go nmap <silent> <M-o> :GoDebugStepOut<CR>
-
-" ---------------
-" asynccomplete setting
-" ---------------
-let g:asyncomplete_auto_popup = 1
-let g:asyncomplete_remove_duplicates = 1
-"if has('gui_macvim')
-"  let g:asyncomplete_log_file = expand('~/.vim/asyncomplete.log')
-"end
-"let g:asyncomplete_log_file = expand('~/.config/nvim/asyncomplete.log')
-"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-"inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
-"imap <c-space> <Plug>(asyncomplete_force_refresh)
-"autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-
-" ---------------
-" asyncomplete-file.vim setting
-" ---------------
-au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
-    \ 'name': 'file',
-    \ 'whitelist': ['*'],
-    \ 'priority': 10,
-    \ 'completor': function('asyncomplete#sources#file#completor')
-    \ }))
-
-" ---------------
-" asyncomplete-buffer.vim setting
-" ---------------
-call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
-    \ 'name': 'buffer',
-    \ 'whitelist': ['*'],
-    \ 'blacklist': ['go', 'ruby'],
-    \ 'completor': function('asyncomplete#sources#buffer#completor'),
-    \ }))
-
-" ---------------
-" asyncomplete-tags.vim setting
-" ---------------
-au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#tags#get_source_options({
-    \ 'name': 'tags',
-    \ 'whitelist': ['ruby'],
-    \ 'completor': function('asyncomplete#sources#tags#completor'),
-    \ 'config': {
-    \    'max_file_size': 500000000,
-    \  },
-    \ }))
 
