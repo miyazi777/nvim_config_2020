@@ -10,6 +10,7 @@ set number                                          " 行番号表示
 set clipboard=unnamed                   " クリップボードを共用できるようにする
 set laststatus=2                        " ステータスライン表示
 "set ignorecase                		" 検索時に大文字・小文字を区別しない
+"set termguicolors                 " True Color有効化
 autocmd BufWritePre * :%s/\s\+$//ge     " クリップボードを共用できるようにする
 " 日本語切り替えのctrl+Jの無効化
 inoremap <C-J> <nop>
@@ -248,6 +249,9 @@ Plug 'posva/vim-vue', { 'for': ['vue'] }
 " html coding
 Plug 'mattn/emmet-vim', { 'for': ['html'] }
 
+" complete plugin
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " lsp & complete plugin
 "Plug 'prabirshrestha/async.vim'
 "Plug 'prabirshrestha/vim-lsp'
@@ -485,3 +489,11 @@ autocmd FileType go nmap <silent> <M-n> :GoDebugNext<CR>
 autocmd FileType go nmap <silent> <M-s> :GoDebugStep<CR>
 autocmd FileType go nmap <silent> <M-o> :GoDebugStepOut<CR>
 
+" ---------------
+" coc.nvim setting
+" ---------------
+nmap <silent> <C-]> <Plug>(coc-definition)
+nmap <silent> ;j <Plug>(coc-definition)
+nmap <silent> ;d <Plug>(coc-type-definition)
+nmap <silent> ;i <Plug>(coc-implementation)
+nmap <silent> ;r <Plug>(coc-references)
