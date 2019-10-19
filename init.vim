@@ -69,7 +69,7 @@ set ruler           " カーソル位置
 " popup menu color
 highlight Pmenu ctermfg=Black ctermbg=DarkGray
 " popup menu select item color
-highlight PmenuSel ctermfg=DarkRed ctermbg=Gray
+highlight PmenuSel ctermfg=Black ctermbg=Gray
 
 " ---------------
 " search setting
