@@ -1,0 +1,27 @@
+{
+  "suggest.noselect":false,
+  "suggest.preferCompleteThanJumpPlaceholder":true,
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".git/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "gocodeCompletionEnabled": true,
+        "diagnosticsEnabled": true,
+        "lintTool": "golint"
+      }
+    },
+    "ruby": {
+      "command": "solargraph",
+      "rootPatterns": [".git/"],
+      "filetypes": ["ruby"]
+    },
+    "vue": {
+      "command": "vls",
+      "filetypes": ["vue"]
+    }
+  },
+  "solargraph.diagnostics": true,
+  "solargraph.hover": true
+}

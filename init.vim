@@ -67,9 +67,9 @@ set ruler           " カーソル位置
 " popup menu setting
 " ---------------
 " popup menu color
-highlight Pmenu ctermfg=Black ctermbg=White
+highlight Pmenu ctermfg=Black ctermbg=DarkGray
 " popup menu select item color
-highlight PmenuSel ctermfg=Black ctermbg=gray
+highlight PmenuSel ctermfg=DarkRed ctermbg=Gray
 
 " ---------------
 " search setting
@@ -182,7 +182,7 @@ augroup END
 " ---------------
 " vue.js setting
 " ---------------
-autocmd BufRead,BufNewFile *.vue setfiletype html
+autocmd BufRead,BufNewFile *.vue setfiletype vue
 
 " ---------------
 " dynamic provider setting
@@ -251,6 +251,9 @@ Plug 'mattn/emmet-vim', { 'for': ['html'] }
 
 " complete plugin
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" code analysis
+Plug 'dense-analysis/ale'
 
 " lsp & complete plugin
 "Plug 'prabirshrestha/async.vim'
@@ -497,3 +500,12 @@ nmap <silent> ;j <Plug>(coc-definition)
 nmap <silent> ;d <Plug>(coc-type-definition)
 nmap <silent> ;i <Plug>(coc-implementation)
 nmap <silent> ;r <Plug>(coc-references)
+
+" ---------------
+" ale setting
+" ---------------
+"let g:ale_fixers = {
+"      \ 'go': ['golint'],
+"      \ 'ruby': ['rubocop'],
+"      \ }
+
