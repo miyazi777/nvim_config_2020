@@ -67,7 +67,7 @@ set ruler           " カーソル位置
 " popup menu setting
 " ---------------
 " popup menu color
-highlight Pmenu ctermfg=Black ctermbg=DarkGray
+highlight Pmenu ctermfg=Gray ctermbg=Black
 " popup menu select item color
 highlight PmenuSel ctermfg=Black ctermbg=Gray
 
@@ -297,11 +297,7 @@ let g:fzf_layout = { 'up': '~70%' }
 nnoremap <silent> ;gf :GFiles<CR>
 
 " file selector
-nnoremap <silent> ;f :FZFFileList<CR>
-command! FZFFileList call fzf#run({
-            \ 'source': 'find . -type d -name .git -prune -o ! -name .DS_Store ! -name "*~" -name "*.*"',
-            \ 'options': '--exact --reverse',
-            \ 'sink': 'e'})
+nnoremap <silent> ;f :Files<CR>
 
 " grep
 nnoremap <silent> ;g :Grep<CR>
@@ -439,5 +435,10 @@ nmap <silent> ;r <Plug>(coc-references)
 let g:ale_fixers = {
       \ 'go': ['golint'],
       \ 'ruby': ['rubocop'],
+      \ 'html': [''],
+      \ 'css': ['stylelint'],
+      \ 'javascript': ['eslint'],
+      \ 'vue': ['eslint'],
       \ }
+let g:ale_linter_aliases = {'vue': 'css'}
 
