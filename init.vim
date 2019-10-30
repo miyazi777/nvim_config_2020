@@ -49,10 +49,10 @@ end
 " ---------------
 set background=dark
 "colorscheme solarized
-"colorscheme jellybeans
+colorscheme jellybeans
 "colorscheme solarized8
 "colorscheme gruvbox
-colorscheme iceberg
+"colorscheme iceberg
 
 " ---------------
 " cursor line setting
