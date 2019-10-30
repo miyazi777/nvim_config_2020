@@ -182,7 +182,7 @@ augroup END
 " ---------------
 " vue.js setting
 " ---------------
-autocmd BufRead,BufNewFile *.vue setfiletype vue
+"autocmd BufRead,BufNewFile *.vue setfiletype vue
 
 " ---------------
 " dynamic provider setting
@@ -244,16 +244,17 @@ Plug 'jodosha/vim-godebug', { 'for': ['go'] }
 "Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 
 " programing vue.js
-Plug 'posva/vim-vue', { 'for': ['vue'] }
+"Plug 'posva/vim-vue', { 'for': ['vue'] }
 
 " html coding
 Plug 'mattn/emmet-vim', { 'for': ['html'] }
+Plug 'docunext/closetag.vim'
 
 " complete plugin
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " code analysis
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 
 " lsp & complete plugin
 "Plug 'prabirshrestha/async.vim'
@@ -432,13 +433,18 @@ nmap <silent> ;r <Plug>(coc-references)
 " ---------------
 " ale setting
 " ---------------
-let g:ale_fixers = {
-      \ 'go': ['golint'],
-      \ 'ruby': ['rubocop'],
-      \ 'html': [''],
-      \ 'css': ['stylelint'],
-      \ 'javascript': ['eslint'],
-      \ 'vue': ['eslint'],
-      \ }
-let g:ale_linter_aliases = {'vue': 'css'}
+"let g:ale_fixers = {
+"      \ 'go': ['golint'],
+"      \ 'ruby': ['rubocop'],
+"      \ 'html': [''],
+"      \ 'css': ['stylelint'],
+"      \ 'javascript': ['eslint'],
+"      \ 'vue': ['eslint'],
+"      \ }
+"let g:ale_linter_aliases = {'vue': 'css'}
+
+" ---------------
+" closetag setting
+" ---------------
+let g:closetag_html_style=1
 
