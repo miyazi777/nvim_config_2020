@@ -45,6 +45,16 @@ if has('gui_macvim')
 end
 
 " ---------------
+" color scheme setting
+" ---------------
+set background=dark
+"colorscheme solarized
+"colorscheme jellybeans
+"colorscheme solarized8
+"colorscheme gruvbox
+colorscheme iceberg
+
+" ---------------
 " cursor line setting
 " ---------------
 set cursorline			 	        " カーソル行のハイライト
@@ -207,7 +217,13 @@ endif
 
 call plug#begin(s:plugin_path.'plugged')
 " color schema
-Plug 'sickill/vim-monokai', {'do': 'cp colors/* ~/.config/nvim/colors/'}
+"Plug 'sickill/vim-monokai', {'do': 'cp colors/* ~/.config/nvim/colors/'}
+"Plug 'micha/vim-colors-solarized', {'do': 'cp colors/* ~/.config/nvim/colors/'}
+"Plug 'nanotech/jellybeans.vim', {'do': 'cp colors/* ~/.config/nvim/colors/'}
+"Plug 'lifepillar/vim-solarized8', {'do': 'cp colors/* ~/.config/nvim/colors/'}
+"Plug 'morhetz/gruvbox', {'do': 'cp colors/* ~/.config/nvim/colors/'}
+"Plug 'thinkpixellab/flatland', {'do': 'cp colors/* ~/.config/nvim/colors/'}
+Plug 'cocopon/iceberg.vim', {'do': 'cp colors/* ~/.config/nvim/colors/'}
 
 " async
 Plug 'skywind3000/asyncrun.vim'
