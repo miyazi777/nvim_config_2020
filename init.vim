@@ -182,7 +182,7 @@ augroup END
 " ---------------
 " vue.js setting
 " ---------------
-"autocmd BufRead,BufNewFile *.vue setfiletype vue
+autocmd BufRead,BufNewFile *.vue setfiletype vue
 
 " ---------------
 " dynamic provider setting
