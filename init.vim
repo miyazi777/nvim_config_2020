@@ -253,6 +253,10 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'LeafCage/yankround.vim'
 Plug 'terryma/vim-expand-region'
 
+" auto input
+Plug 'cohama/lexima.vim'
+"Plug 'tpope/vim-endwise'
+
 " programing
 Plug 'thinca/vim-quickrun'
 
@@ -266,7 +270,7 @@ Plug 'jodosha/vim-godebug', { 'for': ['go'] }
 
 " html coding
 Plug 'mattn/emmet-vim', { 'for': ['html'] }
-Plug 'docunext/closetag.vim'
+Plug 'docunext/closetag.vim', { 'for': ['html'] }
 Plug 'Valloric/MatchTagAlways', { 'for': ['html'] }
 
 " lsp & complete plugin
@@ -463,7 +467,7 @@ nmap <silent> gr <Plug>(coc-references)
 "let g:ale_linter_aliases = {'vue': 'css'}
 
 " ---------------
-" closetag setting
+" closetag.vim setting
 " ---------------
 let g:closetag_html_style=1
 
