@@ -53,6 +53,7 @@ colorscheme jellybeans
 "colorscheme solarized8
 "colorscheme gruvbox
 "colorscheme iceberg
+"colorscheme onedark
 
 " ---------------
 " cursor line setting
@@ -223,7 +224,8 @@ call plug#begin(s:plugin_path.'plugged')
 "Plug 'lifepillar/vim-solarized8', {'do': 'cp colors/* ~/.config/nvim/colors/'}
 "Plug 'morhetz/gruvbox', {'do': 'cp colors/* ~/.config/nvim/colors/'}
 "Plug 'thinkpixellab/flatland', {'do': 'cp colors/* ~/.config/nvim/colors/'}
-Plug 'cocopon/iceberg.vim', {'do': 'cp colors/* ~/.config/nvim/colors/'}
+"Plug 'cocopon/iceberg.vim', {'do': 'cp colors/* ~/.config/nvim/colors/'}
+Plug 'joshdick/onedark.vim', {'do': 'cp colors/* ~/.config/nvim/colors/'}
 
 " async
 Plug 'skywind3000/asyncrun.vim'
@@ -265,8 +267,9 @@ Plug 'jodosha/vim-godebug', { 'for': ['go'] }
 " html coding
 Plug 'mattn/emmet-vim', { 'for': ['html'] }
 Plug 'docunext/closetag.vim'
+Plug 'Valloric/MatchTagAlways', { 'for': ['html'] }
 
-" complete plugin
+" lsp & complete plugin
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " code analysis
@@ -441,10 +444,10 @@ autocmd FileType go nmap <silent> <M-o> :GoDebugStepOut<CR>
 " coc.nvim setting
 " ---------------
 nmap <silent> <C-]> <Plug>(coc-definition)
-nmap <silent> ;j <Plug>(coc-definition)
-nmap <silent> ;d <Plug>(coc-type-definition)
-nmap <silent> ;i <Plug>(coc-implementation)
-nmap <silent> ;r <Plug>(coc-references)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gt <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " ---------------
 " ale setting
