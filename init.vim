@@ -103,8 +103,17 @@ nnoremap SS :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " ---------------
 " command setting
 " ---------------
-set wildmenu        " コマンドモードの補完
+set wildmenu wildmode=list:longest,full  " コマンドラインモードの補完を有効に
 set history=500     " 保存するコマンド履歴数
+set nocompatible    " TABで補完する
+
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <C-n> <Down>
+cnoremap <C-p> <Up>
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-d> <Del>
 
 " インサートモード時に日付入力
 inoremap ,date <C-R>=strftime('%Y-%m-%d')<CR>
@@ -297,6 +306,9 @@ Plug 'tpope/vim-fugitive'
 
 " memo
 Plug 'glidenote/memolist.vim', { 'on': ['MemoNew', 'MemoList', 'MemoGrep'] }
+
+" go debug
+Plug 'sebdah/vim-delve'
 
 call plug#end()
 
