@@ -271,8 +271,10 @@ Plug 'thinca/vim-quickrun'
 
 " programing go-lang
 Plug 'fatih/vim-go', { 'for': ['go'], 'do': ':GoUpdateBinaries' }
-Plug 'jodosha/vim-godebug', { 'for': ['go'] }
+"Plug 'jodosha/vim-godebug', { 'for': ['go'] }
 "Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+" go debug
+Plug 'sebdah/vim-delve', { 'for': ['go'] }
 
 " programing vue.js
 "Plug 'posva/vim-vue', { 'for': ['vue'] }
@@ -307,8 +309,8 @@ Plug 'tpope/vim-fugitive'
 " memo
 Plug 'glidenote/memolist.vim', { 'on': ['MemoNew', 'MemoList', 'MemoGrep'] }
 
-" go debug
-Plug 'sebdah/vim-delve'
+" tmux
+Plug 'benmills/vimux'
 
 call plug#end()
 
@@ -447,14 +449,20 @@ let g:go_doc_keywordprg_enabled = 0
 let g:go_fmt_command = "goimports"
 
 " debug setting
-autocmd FileType go nmap <silent> <M-d> :GoDebugStart<CR>
-autocmd FileType go nmap <silent> <M-q> :GoDebugStop<CR>
-autocmd FileType go nmap <silent> <M-r> :GoDebugRestart<CR>
-autocmd FileType go nmap <silent> <M-c> :GoDebugContinue<CR>
-autocmd FileType go nmap <silent> <M-b> :GoDebugBreakpoint<CR>
-autocmd FileType go nmap <silent> <M-n> :GoDebugNext<CR>
-autocmd FileType go nmap <silent> <M-s> :GoDebugStep<CR>
-autocmd FileType go nmap <silent> <M-o> :GoDebugStepOut<CR>
+"autocmd FileType go nmap <silent> <M-d> :GoDebugStart<CR>
+"autocmd FileType go nmap <silent> <M-q> :GoDebugStop<CR>
+"autocmd FileType go nmap <silent> <M-r> :GoDebugRestart<CR>
+"autocmd FileType go nmap <silent> <M-c> :GoDebugContinue<CR>
+"autocmd FileType go nmap <silent> <M-b> :GoDebugBreakpoint<CR>
+"autocmd FileType go nmap <silent> <M-n> :GoDebugNext<CR>
+"autocmd FileType go nmap <silent> <M-s> :GoDebugStep<CR>
+"autocmd FileType go nmap <silent> <M-o> :GoDebugStepOut<CR>
+
+" ---------------
+" vim-delve.vim setting
+" ---------------
+let g:delve_use_vimux = 1
+autocmd FileType go nmap <silent> ;d :DlvToggleBreakpoint<CR>
 
 " ---------------
 " coc.nvim setting
@@ -482,4 +490,13 @@ nmap <silent> gr <Plug>(coc-references)
 " closetag.vim setting
 " ---------------
 let g:closetag_html_style=1
+
+" ---------------
+" vimux.vim setting
+" ---------------
+let g:VimuxHeight = "30"
+let g:VimuxOrientation = "v"
+map ;rr :VimuxPromptCommand<CR>
+map ;rl :VimuxRunLastCommand<CR>
+map ;rc :VimuxCloseRunner<CR>
 
