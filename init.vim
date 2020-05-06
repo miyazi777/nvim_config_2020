@@ -138,6 +138,7 @@ if has("autocmd")
   autocmd FileType js       setlocal sw=4 sts=4 ts=4 et
   autocmd FileType json     setlocal sw=2 sts=2 ts=2 et
   autocmd FileType python   setlocal sw=4 sts=4 ts=4 et
+  autocmd FileType yaml     setlocal sw=2 sts=2 ts=2 et
 endif
 
 " ---------------
@@ -311,6 +312,9 @@ Plug 'glidenote/memolist.vim', { 'on': ['MemoNew', 'MemoList', 'MemoGrep'] }
 
 " tmux
 Plug 'benmills/vimux'
+
+" indent line
+Plug 'Yggdroot/indentLine', { 'for': ['yaml', 'json'] }
 
 call plug#end()
 
@@ -500,3 +504,7 @@ map ;rr :VimuxPromptCommand<CR>
 map ;rl :VimuxRunLastCommand<CR>
 map ;rc :VimuxCloseRunner<CR>
 
+" ---------------
+" indentLine.vim setting
+" ---------------
+let g:indentLine_char = '⦙'
