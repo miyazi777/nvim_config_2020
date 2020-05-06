@@ -263,7 +263,7 @@ Plug 'LeafCage/yankround.vim'
 Plug 'terryma/vim-expand-region'
 
 " auto input
-Plug 'cohama/lexima.vim'
+"Plug 'cohama/lexima.vim'
 "Plug 'tpope/vim-endwise'
 
 " programing
