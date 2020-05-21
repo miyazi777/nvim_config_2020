@@ -148,6 +148,7 @@ autocmd BufNewFile,BufRead *.rb nnoremap <C-e> :w<CR> :!ruby %<CR>
 autocmd BufNewFile,BufRead *.py nnoremap <C-e> :w<CR> :!python3 %<CR>
 autocmd BufNewFile,BufRead *.go nnoremap <C-e> :w<CR> :!go run %<CR>
 autocmd BufNewFile,BufRead *.js nnoremap <C-e> :w<CR> :!node %<CR>
+autocmd BufNewFile,BufRead *.swift nnoremap <C-e> :w<CR> :!swift %<CR>
 
 " ---------------
 " command line mode setting
