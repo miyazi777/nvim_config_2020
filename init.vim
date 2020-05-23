@@ -509,3 +509,16 @@ map ;rc :VimuxCloseRunner<CR>
 " indentLine.vim setting
 " ---------------
 let g:indentLine_char = '⦙'
+
+" ---------------
+" vim-quickrun.vim setting
+" ---------------
+nnoremap <silent> ;;r :QuickRun<CR>
+let g:quickrun_config = {
+    \ '_' : {
+        \ 'outputter' : 'error',
+        \ 'outputter/error/success' : 'buffer',
+        \ 'outputter/error/error'   : 'quickfix',
+        \ 'outputter/buffer/split' : ':botright 8sp',
+    \ }
+\}
