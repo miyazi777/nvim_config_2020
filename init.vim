@@ -2,7 +2,7 @@
 " basic setting
 " --------------------------------
 set encoding=utf-8          " utf-8
-set t_Co=256                                    " 256色モード
+"set t_Co=256                                    " 256色モード
 "set termguicolors                   " TrueColor設定
 
 syntax on                                           " シンタックスハイライト
@@ -10,7 +10,13 @@ set number                                          " 行番号表示
 set clipboard=unnamed                   " クリップボードを共用できるようにする
 set laststatus=2                        " ステータスライン表示
 "set ignorecase                		" 検索時に大文字・小文字を区別しない
-"set termguicolors                 " True Color有効化
+if has('nvim')          " True Color有効化
+  set termguicolors
+end
+if has('gui_macvim')
+  set guicolors
+end
+
 autocmd BufWritePre * :%s/\s\+$//ge     " クリップボードを共用できるようにする
 " 日本語切り替えのctrl+Jの無効化
 inoremap <C-J> <nop>
@@ -320,17 +326,6 @@ Plug 'Yggdroot/indentLine', { 'for': ['yaml', 'json'] }
 call plug#end()
 
 " ---------------
-" vim-vuftabline.vim setting
-" ---------------
-let g:buftabline_show = 2
-let g:buftabline_numbers = 2
-
-highlight BufTabLineCurrent ctermbg=black
-highlight BufTabLineActive ctermbg=white
-highlight BufTabLineHidden ctermbg=darkgrey
-highlight BufTabLineFill ctermbg=grey
-
-" ---------------
 " fzf.vim setting
 " ---------------
 " layout - down / up / left / right
@@ -433,13 +428,13 @@ nnoremap <silent> ;;g :MemoGrep<CR>
 " ---------------
 " vim-buftabline.vim setting
 " ---------------
-let g:buftabline_show = 2
-let g:buftabline_numbers = 2
+let g:buftabline_show = 2       " 常に表示
+let g:buftabline_numbers = 2    " 左から右へ表示
 
-highlight BufTabLineCurrent ctermbg=black
-highlight BufTabLineActive ctermbg=white
-highlight BufTabLineHidden ctermbg=darkgrey
-highlight BufTabLineFill ctermbg=grey
+highlight BufTabLineCurrent guibg=black
+highlight BufTabLineActive guibg=white
+highlight BufTabLineHidden guibg=darkgrey
+highlight BufTabLineFill guibg=grey20
 
 " ---------------
 " vim-go.vim setting
