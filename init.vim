@@ -53,13 +53,15 @@ end
 " ---------------
 " color scheme setting
 " ---------------
-set background=dark
-"colorscheme solarized
-colorscheme jellybeans
-"colorscheme solarized8
-"colorscheme gruvbox
-"colorscheme iceberg
-"colorscheme onedark
+if has('nvim')
+  set background=dark
+  "colorscheme solarized
+  colorscheme jellybeans
+  "colorscheme solarized8
+  "colorscheme gruvbox
+  "colorscheme iceberg
+  "colorscheme onedark
+end
 
 " ---------------
 " cursor line setting
