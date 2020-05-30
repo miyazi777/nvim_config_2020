@@ -433,10 +433,10 @@ nnoremap <silent> ;;g :MemoGrep<CR>
 let g:buftabline_show = 2       " 常に表示
 let g:buftabline_numbers = 2    " 左から右へ表示
 
-highlight BufTabLineCurrent guibg=black
-highlight BufTabLineActive guibg=white
-highlight BufTabLineHidden guibg=darkgrey
-highlight BufTabLineFill guibg=grey20
+highlight BufTabLineCurrent guibg=black guifg=#00b0b0
+highlight BufTabLineActive guibg=black guifg=#00b0b0
+highlight BufTabLineHidden guibg=grey40
+highlight BufTabLineFill guibg=grey
 
 " ---------------
 " vim-go.vim setting
