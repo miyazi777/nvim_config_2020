@@ -325,6 +325,9 @@ Plug 'benmills/vimux'
 " indent line
 Plug 'Yggdroot/indentLine', { 'for': ['yaml', 'json'] }
 
+" markdown
+Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
+
 call plug#end()
 
 " ---------------
@@ -519,3 +522,9 @@ let g:quickrun_config = {
         \ 'outputter/buffer/split' : ':botright 8sp',
     \ }
 \}
+
+" ---------------
+" vim-table-mode setting
+" ---------------
+:command Tm TableModeToggle
+
