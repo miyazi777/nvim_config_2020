@@ -294,6 +294,9 @@ Plug 'mattn/emmet-vim', { 'for': ['html'] }
 Plug 'docunext/closetag.vim', { 'for': ['html'] }
 Plug 'Valloric/MatchTagAlways', { 'for': ['html'] }
 
+" json editor
+Plug 'elzr/vim-json', { 'for': ['json'] }
+
 " lsp & complete plugin
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -527,4 +530,9 @@ let g:quickrun_config = {
 " vim-table-mode setting
 " ---------------
 :command Tm TableModeToggle
+
+" ---------------
+" vim-json setting
+" ---------------
+let g:vim_json_syntax_conceal = 0
 
