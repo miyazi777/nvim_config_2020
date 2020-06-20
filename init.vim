@@ -334,6 +334,9 @@ Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 " file rename
 Plug 'danro/rename.vim'
 
+" vim commandline shell emulate
+Plug 'b4b4r07/vim-shellutils'
+
 call plug#end()
 
 " ---------------
