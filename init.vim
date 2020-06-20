@@ -331,6 +331,9 @@ Plug 'Yggdroot/indentLine', { 'for': ['yaml', 'json'] }
 " markdown
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 
+" file rename
+Plug 'danro/rename.vim'
+
 call plug#end()
 
 " ---------------
