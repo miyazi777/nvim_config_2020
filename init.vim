@@ -27,9 +27,9 @@ set inccommand=split
 " ターミナルモードを抜けるコマンド
 tnoremap <silent> jj <C-\><C-n>
 
-if has('gui_macvim')
-  cd ~/Dropbox/memo
-end
+"if has('gui_macvim')
+"  cd ~/Dropbox/memo
+"end
 
 " ---------------
 " macvim setting
@@ -37,7 +37,7 @@ end
 if has('gui_macvim')
   set columns=120
   set lines=60
-  set termguicolors       " TrueColor設定
+  "set termguicolors       " TrueColor設定
   set guifont=Menlo:h14   " font
   set transparency=8      " 透明度を設定
   set guioptions-=T       " No toolbars
@@ -337,6 +337,9 @@ Plug 'danro/rename.vim'
 " vim commandline shell emulate
 Plug 'b4b4r07/vim-shellutils'
 
+" open browser
+Plug 'tyru/open-browser.vim'
+
 call plug#end()
 
 " ---------------
@@ -535,10 +538,18 @@ let g:quickrun_config = {
 " ---------------
 " vim-table-mode setting
 " ---------------
-:command Tm TableModeToggle
+:command! Tm TableModeToggle
 
 " ---------------
 " vim-json setting
 " ---------------
 let g:vim_json_syntax_conceal = 0
+
+" ---------------
+" open-browser.vim setting
+" ---------------
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+:command! -nargs=1 Ob OpenBrowserSmartSearch <args>
+:command! -nargs=1 Obu OpenBrowser <args>
 
