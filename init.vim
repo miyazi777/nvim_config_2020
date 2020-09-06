@@ -127,6 +127,11 @@ cnoremap <C-d> <Del>
 inoremap ,date <C-R>=strftime('%Y-%m-%d')<CR>
 
 " ---------------
+" filetype setting
+" ---------------
+autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+
+" ---------------
 " indent setting
 " ---------------
 set tabstop=2		    " タブを表示する時の幅
@@ -157,6 +162,7 @@ autocmd BufNewFile,BufRead *.py nnoremap <C-e> :w<CR> :!python3 %<CR>
 autocmd BufNewFile,BufRead *.go nnoremap <C-e> :w<CR> :!go run %<CR>
 autocmd BufNewFile,BufRead *.js nnoremap <C-e> :w<CR> :!node %<CR>
 autocmd BufNewFile,BufRead *.swift nnoremap <C-e> :w<CR> :!swift %<CR>
+autocmd BufNewFile,BufRead *.ts nnoremap <C-e> :w<CR> :!tsc %; node "%:r.js"<CR>
 
 " ---------------
 " command line mode setting
