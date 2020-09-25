@@ -162,7 +162,8 @@ autocmd BufNewFile,BufRead *.py nnoremap <C-e> :w<CR> :!python3 %<CR>
 autocmd BufNewFile,BufRead *.go nnoremap <C-e> :w<CR> :!go run %<CR>
 autocmd BufNewFile,BufRead *.js nnoremap <C-e> :w<CR> :!node %<CR>
 autocmd BufNewFile,BufRead *.swift nnoremap <C-e> :w<CR> :!swift %<CR>
-autocmd BufNewFile,BufRead *.ts nnoremap <C-e> :w<CR> :!tsc %; node "%:r.js"<CR>
+autocmd BufNewFile,BufRead *.ts nnoremap <C-e> :w<CR> :!tsc --target es5 %; node "%:r.js"<CR>
+autocmd BufNewFile,BufRead *.sh nnoremap <C-e> :w<CR> :!bash %<CR>
 
 " ---------------
 " command line mode setting
