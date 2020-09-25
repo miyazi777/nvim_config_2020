@@ -268,6 +268,9 @@ Plug 'simeji/winresizer'
 " terminal
 Plug 'vimlab/split-term.vim'
 
+" filer
+Plug 'lambdalisue/fern.vim'
+
 " operation
 Plug 'deris/vim-shot-f'
 Plug 'rhysd/clever-f.vim'
@@ -559,4 +562,9 @@ let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 :command! -nargs=1 Ob OpenBrowserSmartSearch <args>
 :command! -nargs=1 Obu OpenBrowser <args>
+
+" ---------------
+" fern.vim setting
+" ---------------
+nnoremap <silent> ;tr :Fern -drawer -width=50 .<CR>
 
