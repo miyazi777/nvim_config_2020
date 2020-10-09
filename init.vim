@@ -290,7 +290,7 @@ Plug 'terryma/vim-expand-region'
 Plug 'thinca/vim-quickrun'
 
 " programing go-lang
-Plug 'fatih/vim-go', { 'for': ['go'], 'do': ':GoUpdateBinaries' }
+"Plug 'fatih/vim-go', { 'for': ['go'], 'do': ':GoUpdateBinaries' }
 "Plug 'jodosha/vim-godebug', { 'for': ['go'] }
 "Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 " go debug
@@ -499,6 +499,17 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gt <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" 補完のトリガーを設定
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <C-n>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<C-n>" :
+  \ coc#refresh()
 
 " ---------------
 " ale setting
