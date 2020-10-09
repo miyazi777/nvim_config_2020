@@ -263,7 +263,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-buftabline'
 
 " window
-Plug 'simeji/winresizer'
+"Plug 'simeji/winresizer'
 
 " terminal
 Plug 'vimlab/split-term.vim'
@@ -287,7 +287,7 @@ Plug 'terryma/vim-expand-region'
 "Plug 'tpope/vim-endwise'
 
 " programing
-Plug 'thinca/vim-quickrun'
+"Plug 'thinca/vim-quickrun'
 
 " programing go-lang
 "Plug 'fatih/vim-go', { 'for': ['go'], 'do': ':GoUpdateBinaries' }
@@ -330,10 +330,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
 " memo
-Plug 'glidenote/memolist.vim', { 'on': ['MemoNew', 'MemoList', 'MemoGrep'] }
+"Plug 'glidenote/memolist.vim', { 'on': ['MemoNew', 'MemoList', 'MemoGrep'] }
 
 " tmux
-Plug 'benmills/vimux'
+"Plug 'benmills/vimux'
 
 " indent line
 Plug 'Yggdroot/indentLine', { 'for': ['yaml', 'json'] }
