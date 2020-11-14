@@ -263,7 +263,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-buftabline'
 
 " window
-"Plug 'simeji/winresizer'
+Plug 'simeji/winresizer'
 
 " terminal
 Plug 'vimlab/split-term.vim'
@@ -281,6 +281,7 @@ Plug 'tpope/vim-endwise'
 Plug 'machakann/vim-highlightedyank'
 Plug 'LeafCage/yankround.vim'
 Plug 'terryma/vim-expand-region'
+"Plug 'junegunn/vim-peekaboo'
 
 " auto input
 "Plug 'cohama/lexima.vim'
@@ -290,7 +291,7 @@ Plug 'terryma/vim-expand-region'
 "Plug 'thinca/vim-quickrun'
 
 " programing go-lang
-"Plug 'fatih/vim-go', { 'for': ['go'], 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'for': ['go'], 'do': ':GoUpdateBinaries' }
 "Plug 'jodosha/vim-godebug', { 'for': ['go'] }
 "Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 " go debug

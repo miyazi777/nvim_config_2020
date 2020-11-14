@@ -1,4 +1,12 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhistcnt =2
-let g:netrw_dirhist_2='/.PKInstallSandboxManager'
-let g:netrw_dirhist_1='/'
+let g:netrw_dirhist_2='/Users/takeshimiyajima/work/test'
+let g:netrw_dirhist_1='/Users/takeshimiyajima/workspace/zenkigen/HARUTAKA_apidoc/packages/common/src/responses'
+let g:netrw_dirhist_0='/Users/takeshimiyajima/workspace/zenkigen/HARUTAKA_apidoc/packages/candidate-file-upload/src'
+let g:netrw_dirhist_9='/Users/takeshimiyajima/workspace/zenkigen/HARUTAKA_apidoc/packages/candidate-file-upload'
+let g:netrw_dirhist_8='/Users/takeshimiyajima/study/go-gqlgen/item1'
+let g:netrw_dirhist_7='/Users/takeshimiyajima/memo/tech'
+let g:netrw_dirhist_6='/Users/takeshimiyajima/study/graphql/test1/server/graph'
+let g:netrw_dirhist_5='/Users/takeshimiyajima/study/apollo/test13/client/sample/public'
+let g:netrw_dirhist_4='/Users/takeshimiyajima/study/apollo/test13/client/sample'
+let g:netrw_dirhist_3='/Users/takeshimiyajima/workspace/zenkigen/HARUTAKA_Server'
