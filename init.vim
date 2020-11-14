@@ -309,8 +309,10 @@ Plug 'Valloric/MatchTagAlways', { 'for': ['html'] }
 Plug 'elzr/vim-json', { 'for': ['json'] }
 
 " snippets
-Plug 'sirver/ultisnips'
-Plug 'honza/vim-snippets'
+if has('nvim')
+  Plug 'sirver/ultisnips'
+  Plug 'honza/vim-snippets'
+end
 
 " lsp & complete plugin
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -584,4 +586,9 @@ nmap gx <Plug>(openbrowser-smart-search)
 " ---------------
 nnoremap <silent> ;tr :Fern -drawer -width=50 .<CR>
 
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
+" ---------------
+" sirver/ultisnips.vim setting
+" ---------------
+if has('nvim')
+  let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
+end
