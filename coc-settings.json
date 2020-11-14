@@ -93,5 +93,8 @@
   "solargraph.hover": true,
   "yaml.schemas": {
       "Kubernetes": "/*.yml"
-  }
+  },
+
+  // snippets
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips"
 }
