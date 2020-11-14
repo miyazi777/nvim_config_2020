@@ -224,8 +224,8 @@ autocmd BufRead,BufNewFile *.vue setfiletype vue
 " ---------------
 " dynamic provider setting
 " ---------------
-let g:python_host_prog  = '/Users/takeshimiyajima/.pyenv/versions/py2neovim/bin/python'
-let g:python3_host_prog = '/Users/takeshimiyajima/.pyenv/versions/py3neovim/bin/python'
+let g:python_host_prog  = '/Users/takeshimiyajima/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/Users/takeshimiyajima/.pyenv/versions/neovim3/bin/python'
 let g:ruby_host_prog = '/Users/takeshimiyajima/.rbenv/versions/2.6.3/bin/neovim-ruby-host'
 let g:node_host_prog = '/Users/takeshimiyajima/.nodenv/versions/12.8.0/bin/neovim-node-host'
 
@@ -307,6 +307,10 @@ Plug 'Valloric/MatchTagAlways', { 'for': ['html'] }
 
 " json editor
 Plug 'elzr/vim-json', { 'for': ['json'] }
+
+" snippets
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
 
 " lsp & complete plugin
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -580,3 +584,4 @@ nmap gx <Plug>(openbrowser-smart-search)
 " ---------------
 nnoremap <silent> ;tr :Fern -drawer -width=50 .<CR>
 
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
