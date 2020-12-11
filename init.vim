@@ -187,6 +187,7 @@ nnoremap <silent> <C-h> :bprev<CR>  " ctrl+h 前のバッファ
 nnoremap <silent> <C-q><C-q> :bdelete<CR>   " ctrl+q ctrl+qでバッファ削除
 nnoremap ;q :<C-u>bd<CR>  " バッファを閉じる
 set signcolumn=yes  " signは常に表示
+set diffopt+=vertical " diffsplitの分割表示を左右にする
 
 " ---------------
 " window setting
