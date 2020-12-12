@@ -5,12 +5,7 @@
     "golang": {
       "command": "gopls",
       "rootPatterns": ["go.mod", ".git/"],
-      "filetypes": ["go"],
-      "initializationOptions": {
-        "gocodeCompletionEnabled": true,
-        "diagnosticsEnabled": true,
-        "lintTool": "golint"
-      }
+      "filetypes": ["go"]
     },
     "ruby": {
       "command": "solargraph",

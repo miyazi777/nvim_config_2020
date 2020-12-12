@@ -292,11 +292,11 @@ Plug 'terryma/vim-expand-region'
 "Plug 'thinca/vim-quickrun'
 
 " programing go-lang
-Plug 'fatih/vim-go', { 'for': ['go'], 'do': ':GoUpdateBinaries' }
+"Plug 'fatih/vim-go', { 'for': ['go'], 'do': ':GoUpdateBinaries' }
 "Plug 'jodosha/vim-godebug', { 'for': ['go'] }
 "Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 " go debug
-Plug 'sebdah/vim-delve', { 'for': ['go'] }
+Plug 'sebdah/vim-delve', { 'for': 'go' }
 
 " programing vue.js
 "Plug 'posva/vim-vue', { 'for': ['vue'] }
@@ -475,10 +475,10 @@ highlight BufTabLineFill guibg=grey
 "autocmd FileType go nmap <leader>b  <Plug>(go-build)
 "autocmd FileType go nmap <leader>r  <Plug>(go-run)
 "let g:go_list_type = "quickfix"
-let g:go_def_mapping_enabled = 0
-let g:go_doc_keywordprg_enabled = 0
-
-let g:go_fmt_command = "goimports"
+"let g:go_def_mapping_enabled = 0
+"let g:go_doc_keywordprg_enabled = 0
+"
+"let g:go_fmt_command = "goimports"
 
 " debug setting
 "autocmd FileType go nmap <silent> <M-d> :GoDebugStart<CR>
@@ -493,7 +493,7 @@ let g:go_fmt_command = "goimports"
 " ---------------
 " vim-delve.vim setting
 " ---------------
-let g:delve_use_vimux = 1
+"let g:delve_use_vimux = 1
 autocmd FileType go nmap <silent> ;d :DlvToggleBreakpoint<CR>
 
 " ---------------
